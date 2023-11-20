@@ -7,8 +7,10 @@ const radius=5;
 const area=PI*radius*radius;
 const plantSpace=0.8;
 const plantNumber=20;
+const newPlantNumber=100;
 const maxComp=area/plantSpace;
-let weeks=3;
+let weeks=10;
+let newWeeks=10;
 
 //Predict the plant growth after a specific number of weeks.
 
@@ -34,9 +36,23 @@ else {
     console.log("end");
  }
 
- //Plant growth for week 1 will give resulet -Planted
- //Plant growth for week 2 will give resulet - Monitored
- //Plant growth for week 3 will give resulet -Pruned
+ //Plant growth for week 1 will give result -Planted
+ //Plant growth for week 2 will give result - Monitored
+ //Plant growth for week 3 will give result -Pruned
+
+console.log(`--------------Part 2 --------------`)
+//The amount of additional space that would be required if the scientists were to start with 100 plants, and did not prune them for 10 weeks.
+//If the space remained circular, what would be the radius of this expanded garden?
+
+ let newPlantGrowth=(newPlantNumber*(2)**(weeks-1));
+console.log(`Plant growth fot week # ${weeks} - ${newPlantGrowth}`);
+
+let newArea=newPlantGrowth*plantSpace;
+console .log( `new area when we start with 100 plants is ${newArea}`);
+ 
+ let areaDiferense = newArea-area;
+ let newRadius=(newArea/PI)/2;
+ console.log(`The new radius of the new areaid ${newRadius}`);
   
     
 
