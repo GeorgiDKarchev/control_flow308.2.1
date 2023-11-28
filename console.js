@@ -53,8 +53,28 @@ console .log( `new area when we start with 100 plants is ${newArea}`);
  let areaDiferense = newArea-area;
  let newRadius=(newArea/PI)/2;
  console.log(`The new radius of the new areaid ${newRadius}`);
+
+ console.log(`------------------Part 3--------------`)
+
   
-    
+    const startingPlants = 100;
+    const spaceRequire = plantSpace * startingPlants
+    console.log(`${spaceRequire} -  this is the required spase for 100 plants`)
+    let maximumPlantCapacity= (area/plantSpace)
+    console.log(`${maximumPlantCapacity} - This is the mahimum plants capacity in the current area`)
+
+
+try {
+	if (spaceRequire <= maximumPlantCapacity) {
+		console.log("There is space for 100 plants");
+	} else {
+		throw "Error - The space is Not enough for 100 plants .";
+	}
+} catch (error) {
+	console.log(error);
+}
+
+//console.log("Does this log?");
 
        
   
